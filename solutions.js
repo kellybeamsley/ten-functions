@@ -83,6 +83,9 @@ function not(input){
 // addOne(true)                 // NaN
 // addOne(NaN)                  // NaN
 
+function addOne(input){
+    return Number(input) + 1;
+}
 
 
 // 5. Define a function named isEven that takes in a single input. If the input is an even number or a string containing an even number, return true. Any other input should return false for the output.
@@ -95,6 +98,13 @@ function not(input){
 // isEven(false)               // false
 // isEven("banana")            // false
 
+function isEven(input){
+     if(typeof input === "boolean"){
+         return false;
+     }
+     return  input % 2 === 0;
+}
+
 
 
 // 6. Define a function named isIdentical that takes in two input arguments. If each input is equal both in data type and in value, then return true. If the values are not the same data type or not the same value, return false.
@@ -106,6 +116,10 @@ function not(input){
 // isIdentical(2, "2")                   // false
 // isIdentical("javascript", "java")     // false
 
+function isIdentical(input1, input2) {
+    return input1 === input2 && typeof input1 === typeof input2;
+}
+
 
 
 // 7. Define a function named isEqual that takes in two input arguments. If each argument is equal only in value, then return true. Otherwise return false.
@@ -116,6 +130,10 @@ function not(input){
 // isEqual(4, -5)                        // false
 // isEqual("java", "javascript")         // false
 
+function isEqual(input1, input2){
+    return input1 == input2;
+}
+
 
 
 // 8. Define a function named or that takes in two input arguments. The output returned should be the result of an or operation on both inputs.
@@ -124,6 +142,10 @@ function not(input){
 // or(false, true)                   // true
 // or(false, false)                  // false
 // or("hello", "world")              // "hello" (this behavior is non-obvious, research more!)
+
+function or(input1, input2) {
+    return input1 || input2;
+}
 
 
 
@@ -134,7 +156,9 @@ function not(input){
 // and(false, false)                  // false
 // and("hello", "world")              // "world" (this behavior is non-obvious, research more)
 
-
+function and(input1, input2){
+    return input1 && input2;
+}
 
 // 10. Define a function named concat that takes in two input arguments. If both arguments are strings, then return the concatenated result. If two numbers are provided, then return the string concatenation of each set of numerals.
 // concat("code", "up")                // "codeup"
@@ -142,3 +166,7 @@ function not(input){
 // concat("hello", "world")            // "helloworld"
 // concat(4, 2)                        // "42"
 // concat(true, true)                  // "truetrue"
+
+function concat (input1, input2){
+    return inut1.toString() + input2.toString();
+}
